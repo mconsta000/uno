@@ -9,13 +9,13 @@ typedef enum MODE{FADE, COOL_DOWN} Mode;
 
 // Structure to hold the pin information and current state
 typedef struct PIN_STATE {
-  byte pin;                      // board pin number to control
-  byte brightness;               // led brightness (0 - 255)
-  unsigned short fade_duration;
-  unsigned short cool_down_duration;
-  Mode mode;
-  unsigned long target;
-  short fade_inc;
+  byte pin;                           // board pin number to control
+  byte brightness;                    // led brightness (0 - 255)
+  unsigned short fade_duration;       // duration (ms) between fade steps
+  unsigned short cool_down_duration;  // duration (ms) to "cool down" when led is off
+  Mode mode;                          // LED state in FADE or COOL_DOWN mode
+  unsigned long target;               // target MS to update pin mode/status
+  short fade_inc;                     // direction for fade (1 = UP, -1 DOWN)
 } PinState;
 
 // number of pins to configure
