@@ -5,7 +5,7 @@
   the PIN_STATE struct and the pins array
 */
 
-// Structure to hold the pin inofmration and current state
+// Structure to hold the pin information and current state
 typedef struct PIN_STATE {
   unsigned int pin;           // board pin number to control
   boolean state;              // pin state (true == on, false == off)
